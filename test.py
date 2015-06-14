@@ -1,3 +1,6 @@
+from __future__ import print_function
+from __future__ import absolute_import
+
 import sys
 import unittest
 
@@ -19,11 +22,6 @@ class TestAssertions(unittest.TestCase):
     def test_in_nok(self):
         self.assertIn('foo', ('bar', 'baz'))
 
-    #
-    # def test_bar(self):
-    #     import math
-    #     math.log10(0)
-
 
 class TestExceptions(unittest.TestCase):
 
@@ -40,10 +38,10 @@ class TestExceptions(unittest.TestCase):
 class TestCapture(unittest.TestCase):
 
     def test_stdout(self):
-        print 'a'
-        print 'b'
-        print 'c'
-        print 'd'
+        print('a')
+        print('b')
+        print('c')
+        print('d')
         self.assertTrue(False)
 
 
